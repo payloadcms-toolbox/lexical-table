@@ -1,0 +1,24 @@
+{
+  "name": "@payloadcms-toolbox/lexical-table",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payloadcms-toolbox/lexical-table.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/payloadcms-toolbox/lexical-table/issues"
+  },
+  "homepage": "https://github.com/payloadcms-toolbox/lexical-table#readme",
+  "dependencies": {
+    "@rslib/core": "^0.17.0"
+  }
+}
