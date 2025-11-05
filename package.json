@@ -2,23 +2,64 @@
   "name": "@payloadcms-toolbox/lexical-table",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./dist/feature.client": {
+      "types": "./dist/feature.client.d.ts",
+      "import": "./dist/feature.client.js"
+    },
+    "./style.css": "./dist/feature.client.css"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "check": "biome check",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/payloadcms-toolbox/lexical-table.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "author": {
+    "name": "Evgenii Troinov"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "payload",
+    "payloadcms",
+    "lexical",
+    "richtext",
+    "feature",
+    "table"
+  ],
   "bugs": {
     "url": "https://github.com/payloadcms-toolbox/lexical-table/issues"
   },
   "homepage": "https://github.com/payloadcms-toolbox/lexical-table#readme",
-  "dependencies": {
-    "@rslib/core": "^0.17.0"
+  "dependencies": {},
+  "peerDependencies": {
+    "@payloadcms/richtext-lexical": "^3",
+    "react": ">=19.2.0"
+  },
+  "devDependencies": {
+    "@rslib/core": "^0.17.0",
+    "@biomejs/biome": "^2.3.3",
+    "@types/react": "^19.2.2",
+    "@types/react-color": "^3.0.13",
+    "@vanilla-extract/css": "^1.17.4",
+    "@vanilla-extract/esbuild-plugin": "^2.3.12",
+    "typescript": "^5.9.3"
   }
 }
