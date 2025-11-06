@@ -1,1 +1,1 @@
-export const TableFeature = () => {};
+export const TableFeatureClient = () => {};
